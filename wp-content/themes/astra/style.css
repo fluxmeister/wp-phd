@@ -44,3 +44,9 @@ https://pxhere.com/en/photo/1456591
 https://pxhere.com/en/photo/1389199
 
 /* Note: The CSS files are loaded from assets/css/ folder. */
+
+
+/* Fixed navigation */
+.main-header-bar-wrap {
+    position: fixed;
+}
