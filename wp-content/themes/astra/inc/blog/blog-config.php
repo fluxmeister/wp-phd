@@ -10,12 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
 /**
  * Common Functions for Blog and Single Blog
  *
  * @return  post meta
  */
 if ( ! function_exists( 'astra_get_post_meta' ) ) {
+	
 
 	/**
 	 * Post meta
@@ -30,7 +32,6 @@ if ( ! function_exists( 'astra_get_post_meta' ) ) {
 		$loop_count = 1;
 
 		$separator = apply_filters( 'astra_post_meta_separator', $separator );
-
 		foreach ( $post_meta as $meta_value ) {
 
 			switch ( $meta_value ) {

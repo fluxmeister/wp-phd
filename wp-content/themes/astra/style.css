@@ -50,3 +50,8 @@ https://pxhere.com/en/photo/1389199
 .main-header-bar-wrap {
     position: fixed;
 }
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+    background-image: url('http://wp-phd.com/wp-content/uploads/2020/04/photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg') !important;
+}
