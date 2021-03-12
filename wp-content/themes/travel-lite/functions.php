@@ -218,3 +218,5 @@
 //	Remove WordPress Custom Header Support for the theme travel
 //	remove_theme_support('custom-header');
 
+// Add Custom Fields metabox to admin
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');

@@ -11,8 +11,9 @@ https://www.youtube.com/watch?v=QwBeyYP99WY
 
 ******************************************************  
 12.03.2021.  
+* * Activated Travel Lite Child theme  
 * * 
 ******************************************************  
-* Install&Activate Travel Lite theme  
+* * Install&Activate Travel Lite theme  
 
 
