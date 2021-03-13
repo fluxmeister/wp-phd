@@ -7,8 +7,10 @@ ACF training
 ******************************************************  
 https://www.youtube.com/watch?v=QwBeyYP99WY  
 ******************************************************  
-
-
+13.03.2021.  
+* * Activated VWS theme  
+* * Introduced new CPTs  
+* * Implementing new CPTs  
 ******************************************************  
 12.03.2021.  
 * * Activated Travel Lite Child theme  

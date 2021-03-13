@@ -16,8 +16,35 @@ get_header(); ?>
 		  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
           
             <h1 class="page-title"><?php the_title(); ?></h1><div class="content-ver-sep fwtsep"></div>
-            <span class="postmetadata"><h3><?php the_time('F j, Y'); ?></h3><div class="content-ver-sep"> </div><h2>By: <?php the_author_posts_link() ?></h2>
-            <br/><h5>Test</h5>
+            <span class="postmetadata"><h3><?php the_time('F j, Y'); ?></h3>
+            <div class="content-ver-sep"> </div>
+            <h2>By: <?php the_author_posts_link() ?></h2><br/>
+                <h5> <?php
+                    // set the variable to the value entered for the "Prettyness" custom field
+                    $prettyness = get_post_meta($post->ID, 'Prettyness', true);
+                    // check if the prettyness variable has a value
+                    if($prettyness){ ?>
+                        <!-- if the prettyness variable has a value and echo out this sentence in addition to the value of the variable -->
+                        <p>Prettyness: <?php echo $prettyness; ?></p>
+                <?php 
+                    // if the prettyness variable does not have a value then do the following
+                    }else{ 
+                        // do nothing
+                    }
+                ?></h5>
+                <h5> <?php
+                    // set the variable to the value entered for the "Prettyness" custom field
+                    $sexyness = get_post_meta($post->ID, 'Sexyness', true);
+                    // check if the prettyness variable has a value
+                    if($sexyness){ ?>
+                        <!-- if the prettyness variable has a value and echo out this sentence in addition to the value of the variable -->
+                        <p>Sexyness: <?php echo $sexyness; ?></p>
+                <?php 
+                    // if the prettyness variable does not have a value then do the following
+                    }else{ 
+                        // do nothing
+                    }
+                ?></h5>
             Posted in <?php the_category(', ') ?><?php the_tags('<br />Tags: ', ', ', ''); ?><br /><h5><?php edit_post_link('Edit'); ?></h5>
             </span>	
             <div class="entrytext"><div class="thumb"><?php the_post_thumbnail( 'medium_large' ); ?></div>
