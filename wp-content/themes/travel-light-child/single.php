@@ -52,7 +52,7 @@ get_header(); ?>
             <?php
                 // $cost = get_post_meta($post--->ID, 'Cost', true);
                 $prettyness = get_post_meta($post->ID, 'Prettyness', true);
-                $cleanliness = get_post_meta($post->ID, 'Cleanliness', true);
+                $sexyness = get_post_meta($post->ID, 'Sexyness', true);
                 ?>
             <?php 
                 // output Friendliness if it is added as a custom field
@@ -62,8 +62,8 @@ get_header(); ?>
                 }else{ 
                     // do nothing
                     }
-                // output Friendliness if it is added as a custom field
-                if($cleanliness){ ?>
+                // output sexyness if it is added as a custom field
+                if($sexyness){ ?>
             <li>Sexyness: <? echo $sexyness; ?></li>
             <?php 
                 }else{ 
