@@ -119,7 +119,7 @@
 
 // Content Type Showing
 	function travel_content() { the_content('<span class="read-more">'. __('Read More ...','travel-lite') . '</span>'); }
-	function travel_creditline() { echo '<span class="credit">| Travel Theme by: <a href="'. esc_url('https://d5creation.com/theme/travel').'" target="_blank"> D5 Creation</a> | Powered by: <a href="http://wordpress.org" target="_blank">WordPress</a></span>'; }
+	function travel_creditline() { echo '<span class="credit">| VWS Theme by: <a href="'. esc_url('https://github.com/fluxmeister').'" target="_blank"> FluxMeister</a> | Powered by: <a href="http://vektorwebsolutions.com" target="_blank">VektorWebSolutions</a></span>'; }
 
 //	Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link
 	function travel_page_menu_args( $travel_args ) {

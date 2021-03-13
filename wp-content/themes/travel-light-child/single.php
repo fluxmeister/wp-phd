@@ -16,8 +16,11 @@ get_header(); ?>
 		  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
           
             <h1 class="page-title"><?php the_title(); ?></h1><div class="content-ver-sep fwtsep"></div>
-            <span class="postmetadata"><h3><?php the_time('F j, Y'); ?></h3><div class="content-ver-sep"> </div><h2>By: <?php the_author_posts_link() ?></h2>Posted in <?php the_category(', ') ?><?php the_tags('<br />Tags: ', ', ', ''); ?><br /><h5><?php edit_post_link('Edit'); ?></h5></span>	
-            <div class="entrytext"><div class="thumb"><?php the_post_thumbnail(); ?></div>
+            <span class="postmetadata"><h3><?php the_time('F j, Y'); ?></h3><div class="content-ver-sep"> </div><h2>By: <?php the_author_posts_link() ?></h2>
+            <br/><h5>Test</h5>
+            Posted in <?php the_category(', ') ?><?php the_tags('<br />Tags: ', ', ', ''); ?><br /><h5><?php edit_post_link('Edit'); ?></h5>
+            </span>	
+            <div class="entrytext"><div class="thumb"><?php the_post_thumbnail( 'medium_large' ); ?></div>
 			<?php the_content(); ?>
             </div>
             <div class="clear"> </div>
