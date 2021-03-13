@@ -48,7 +48,32 @@ get_header(); ?>
             Posted in <?php the_category(', ') ?><?php the_tags('<br />Tags: ', ', ', ''); ?><br /><h5><?php edit_post_link('Edit'); ?></h5>
             </span>	
             <div class="entrytext"><div class="thumb"><?php the_post_thumbnail( 'medium_large' ); ?></div>
-			<?php the_content(); ?>
+			
+            <?php
+                // $cost = get_post_meta($post--->ID, 'Cost', true);
+                $prettyness = get_post_meta($post->ID, 'Prettyness', true);
+                $cleanliness = get_post_meta($post->ID, 'Cleanliness', true);
+                ?>
+            <?php 
+                // output Friendliness if it is added as a custom field
+                if($prettyness){ ?>
+            <li>Prettyness: <? echo $prettyness; ?></li>
+            <?php 
+                }else{ 
+                    // do nothing
+                    }
+                // output Friendliness if it is added as a custom field
+                if($cleanliness){ ?>
+            <li>Sexyness: <? echo $sexyness; ?></li>
+            <?php 
+                }else{ 
+                    // do nothing
+                }
+                ?></ul>
+            <?php ?>
+
+            <br/>
+            <?php the_content(); ?>
             </div>
             <div class="clear"> </div>
             <?php  wp_link_pages( array( 'before' => '<div class="page-link"><span>' . 'Pages:' . '</span>', 'after' => '</div>' ) ); ?>
