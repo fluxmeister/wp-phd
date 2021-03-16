@@ -1,22 +1,21 @@
 /*
-Theme Name: Travel Lite
-Theme URI: https://d5creation.com/theme/travel/
+Theme Name: VWS Prototype Theme Child
+Theme URI: 
 
-Author: D5 Creation
-Author URI: https://d5creation.com/
-
-Description: Travel is one of the most popular Travel Themes. This Theme is Super Elegant, Professional and Responsive. It is ideal for Travel Agencies, Hotels, Tour Operators, Airlines, Photographic Agencies, Environmental Organizations, Tourist Spot Presentation, Tourism Promotion, Photography and Other Purposes that may match with your thoughts. You can find details and demo in the Theme Page: https://d5creation.com/theme/travel/
+Author: FluxMeister
+Author URI: https://vektorwebsolutions.com/determinator/
+Template: vws-prototype
+Description: Test theme based on VWS Prototype Theme 
 
 Version: 3.1
 
-Tags: two-columns, right-sidebar, custom-header, custom-background, custom-menu, threaded-comments, sticky-post, rtl-language-support, full-width-template, theme-options, featured-images, footer-widgets, translation-ready, entertainment, food-and-drink, holiday  
+Tags: awesome job
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Travel WordPress Theme, Copyright 2012-2018: D5 Creation (www.d5creation.com)
 
-Text Domain: travel-lite
+Text Domain: vws-prototype
 
 */
 
@@ -68,7 +67,7 @@ input#s, input[type="search"].search-field, #bbp_search, .search-field { border-
 
 #header{min-height:75px;min-width:1090px;z-index:4;position:relative}
 img.site-logo,h1.site-title{display:block;float:left;font-size:50px;font-weight:700;margin-top:10px;max-height:80px;max-width:300px;word-wrap:normal;color:#EEE}
-h1.site-title{ max-width: none; max-height: none; }
+h1.site-title{ max-width: none; max-height: none; color: black;}
 #header-content{margin:0 auto;min-height:75px;width:1090px; position: relative; }
 .site-title-hidden{display:none}
 #content{float:left;width:calc(100% - 355px);}
