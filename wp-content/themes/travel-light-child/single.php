@@ -1,9 +1,8 @@
 <?php
 
 /* 	Travel Child Theme's Single Page to display Single Page or Post
-	Copyright: 2012-2017, FluxMeister
+	Copyright: 2021, FluxMeister
 	Based on the Simplest D5 Framework for WordPress
-	Since Travel 1.0
 */
 
 
