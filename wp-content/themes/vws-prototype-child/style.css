@@ -197,7 +197,7 @@ input#s{box-sizing:border-box}
 .widget .gallery-item{margin:5px}
 .widget .gallery-item img{margin:0}
 #container,#content,#content-full{font-size:14px;text-align:justify;z-index:3;position:relative}
-.vspace{height:350px}
+.vspace{height:0px}
 #content img,#content-full img{height:auto;margin:0;max-width:100%;vertical-align:middle}
 #heading{font-size:35px;margin:20px 0;text-align:center;text-transform:uppercase}
 #slide-container{position:absolute;top:0;z-index:1;width:100%}
