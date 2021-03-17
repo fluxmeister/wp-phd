@@ -1,9 +1,7 @@
 <?php
 
-/* Travel Theme's 404 Error Page
-	Copyright: 2012-2017, D5 Creation, www.d5creation.com
-	Based on the Simplest D5 Framework for WordPress
-	Since Travel 1.0
+/*  VWS Prototype Theme's 404 Error Page
+	Copyright: 2021, FluxMeister
 */
 
 get_header(); ?>

@@ -1,9 +1,7 @@
 <?php
 
-/* 	Travel Theme's Header
-	Copyright: 2012-2017, D5 Creation, www.d5creation.com
-	Based on the Simplest D5 Framework for WordPress
-	Since Travel 1.0
+/* 	VWS Prototype Theme's Header
+	Copyright: 2021, FluxMeister
 */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>

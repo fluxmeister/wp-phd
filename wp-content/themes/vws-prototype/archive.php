@@ -11,6 +11,7 @@ get_header(); ?>
 
 <div id="content">
 	<?php if (have_posts()) : ?>
+		
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		<h1 class="page-title"><?php the_archive_title(); ?></h1>
 		<div class="description"><?php echo the_archive_description(); ?></div>

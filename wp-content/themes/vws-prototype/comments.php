@@ -1,8 +1,6 @@
 <?php
-/* Travel Theme's Comments Area for Single Pages
-	Copyright: 2012-2017, D5 Creation, www.d5creation.com
-	Based on the Simplest D5 Framework for WordPress
-	Since Travel 1.0
+/*  VWS Prototype Theme's Comments Area for Single Pages
+	Copyright: 2021, FluxMeister
 */
 
 	if ( post_password_required() ) { return; } ?>

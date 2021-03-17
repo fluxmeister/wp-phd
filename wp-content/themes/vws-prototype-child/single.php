@@ -1,23 +1,20 @@
 <?php
 
-/* 	Travel Child Theme's Single Page to display Single Page or Post
+/* 	VWS Prototype Child Theme's Single Page to display Single Page or Post
 	Copyright: 2021, FluxMeister
-	Based on the Simplest D5 Framework for WordPress
 */
 
 
 get_header(); ?>
 
 <div id="container">
-
 <div id="content">
           
 		  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-          
+            
             <h1 class="page-title"><?php the_title(); ?></h1><div class="content-ver-sep fwtsep"></div>
             <span class="postmetadata"><h3><?php the_time('F j, Y'); ?></h3>
-            <div class="content-ver-sep"> </div>
-            <h2>By: <?php the_author_posts_link() ?></h2><br/>
+                <h2>By: <?php the_author_posts_link() ?></h2><br/>
                 <h5> <?php
                     // set the variable to the value entered for the "Prettyness" custom field
                     $prettyness = get_post_meta($post->ID, 'Prettyness', true);

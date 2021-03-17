@@ -1,6 +1,6 @@
 <?php
-/* 	VWS Theme Prototype's Functions
-	Copyright: 2021
+/* 	VVWS Prototype Theme's Functions
+	Copyright: 2021, FluxMeister
 */
 
 // Load the D5 Framework Optios Page
