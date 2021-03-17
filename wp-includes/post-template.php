@@ -1758,31 +1758,31 @@ function get_the_password_form( $post = 0 ) {
  * @param string|string[] $template The specific template filename or array of templates to match.
  * @return bool True on success, false on failure.
  */
-function is_page_template( $template = '' ) {
-	if ( ! is_singular() ) {
-		return false;
-	}
+// function is_page_template( $template = '' ) {
+// 	if ( ! is_singular() ) {
+// 		return false;
+// 	}
 
-	$page_template = get_page_template_slug( get_queried_object_id() );
+// 	$page_template = get_page_template_slug( get_queried_object_id() );
 
-	if ( empty( $template ) ) {
-		return (bool) $page_template;
-	}
+// 	if ( empty( $template ) ) {
+// 		return (bool) $page_template;
+// 	}
 
-	if ( $template == $page_template ) {
-		return true;
-	}
+// 	if ( $template == $page_template ) {
+// 		return true;
+// 	}
 
-	if ( is_array( $template ) ) {
-		if ( ( in_array( 'default', $template, true ) && ! $page_template )
-			|| in_array( $page_template, $template, true )
-		) {
-			return true;
-		}
-	}
+// 	if ( is_array( $template ) ) {
+// 		if ( ( in_array( 'default', $template, true ) && ! $page_template )
+// 			|| in_array( $page_template, $template, true )
+// 		) {
+// 			return true;
+// 		}
+// 	}
 
-	return ( 'default' === $template && ! $page_template );
-}
+// 	return ( 'default' === $template && ! $page_template );
+// }
 
 /**
  * Get the specific template filename for a given post.
@@ -1794,21 +1794,21 @@ function is_page_template( $template = '' ) {
  * @return string|false Page template filename. Returns an empty string when the default page template
  *                      is in use. Returns false if the post does not exist.
  */
-function get_page_template_slug( $post = null ) {
-	$post = get_post( $post );
+// function get_page_template_slug( $post = null ) {
+// 	$post = get_post( $post );
 
-	if ( ! $post ) {
-		return false;
-	}
+// 	if ( ! $post ) {
+// 		return false;
+// 	}
 
-	$template = get_post_meta( $post->ID, '_wp_page_template', true );
+// 	$template = get_post_meta( $post->ID, '_wp_page_template', true );
 
-	if ( ! $template || 'default' === $template ) {
-		return '';
-	}
+// 	if ( ! $template || 'default' === $template ) {
+// 		return '';
+// 	}
 
-	return $template;
-}
+// 	return $template;
+// }
 
 /**
  * Retrieve formatted date timestamp of a revision (linked to that revisions's page).

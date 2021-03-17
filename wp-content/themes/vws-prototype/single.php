@@ -2,6 +2,7 @@
 
 /* 	VWS Prototype Theme's Single Page to display Single Page or Post
 	Copyright: 2021, FluxMeister
+    Template Name: VWS Single Post Template
 */
 
 
