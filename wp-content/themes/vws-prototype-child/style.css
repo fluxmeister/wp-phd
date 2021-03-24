@@ -70,7 +70,7 @@ img.site-logo,h1.site-title{display:block;float:left;font-size:50px;font-weight:
 h1.site-title{ max-width: none; max-height: none; color: black;}
 #header-content{margin:0 auto;min-height:75px;width:1090px; position: relative; }
 .site-title-hidden{display:none}
-#content{float:left;width:calc(100% - 355px);}
+/* #content{float:left;width:calc(100% - 355px);} */
 #content-full{width:100%;}
 .content-ver-sep{clear:both;height:1px;background:#CCC;border-bottom:1px solid #FFF}
 .fwtsep{display:none;margin-bottom:10px}
@@ -305,4 +305,9 @@ h2#client-text.post-title{color:#00C7EF;opacity:.7;padding:10px 0;text-align:cen
 h1{page-break-before:always}
 h1,h2,h3,h4,h5,h6{page-break-after:avoid}
 ul,ol,dl{page-break-before:avoid}
+}
+
+.featured-contents #right-sidebar, #right-sidebar {
+    margin: -10px 0 0;
+    visibility: hidden;
 }
