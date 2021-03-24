@@ -10,6 +10,7 @@ function my_theme_enqueue_styles() {
     );
 }
 
+
 /**
  * Determines whether currently in a page template.
  *
@@ -162,3 +163,107 @@ function custom_single_template($template) {
 }
 add_filter( 'single_template', 'custom_single_template' );
 /** END Custom Post Type Template Selector **/
+
+
+// Add Custom Fields metabox to admin
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
+
+
+/*
+* Register a custom post type called "Pretty Girls".
+*
+* @see get_post_type_labels() for label keys.
+*/
+add_action( 'init', 'acf_create_post_type' );
+function acf_create_post_type() {
+	$args = [
+		'label'  => esc_html__( 'Pretty Girls', 'text-domain' ),
+		'labels' => [
+			'menu_name'          => esc_html__( 'Pretty Girls', 'pretty-girls' ),
+			'name_admin_bar'     => esc_html__( 'Pretty Girl', 'pretty-girls' ),
+			'add_new'            => esc_html__( 'Add Pretty Girl', 'pretty-girls' ),
+			'add_new_item'       => esc_html__( 'Add new Pretty Girl', 'pretty-girls' ),
+			'new_item'           => esc_html__( 'New Pretty Girl', 'pretty-girls' ),
+			'edit_item'          => esc_html__( 'Edit Pretty Girl', 'pretty-girls' ),
+			'view_item'          => esc_html__( 'View Pretty Girl', 'pretty-girls' ),
+			'update_item'        => esc_html__( 'View Pretty Girl', 'pretty-girls' ),
+			'all_items'          => esc_html__( 'All Pretty Girls', 'pretty-girls' ),
+			'search_items'       => esc_html__( 'Search Pretty Girls', 'pretty-girls' ),
+			'parent_item_colon'  => esc_html__( 'Parent Pretty Girl', 'pretty-girls' ),
+			'not_found'          => esc_html__( 'No Pretty Girls found', 'pretty-girls' ),
+			'not_found_in_trash' => esc_html__( 'No Pretty Girls found in Trash', 'pretty-girls' ),
+			'name'               => esc_html__( 'Pretty Girls', 'pretty-girls' ),
+			'singular_name'      => esc_html__( 'Pretty Girl', 'pretty-girls' ),
+		],
+		'public'              => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'show_ui'             => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'show_in_rest'        => true,
+		'capability_type'     => 'post',
+		'hierarchical'        => false,
+		'has_archive'         => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'rewrite_no_front'    => false,
+		'show_in_menu'        => true,
+		'menu_icon'           => 'dashicons-heart',
+		'supports' => [
+			'title',
+			'editor',
+			'author',
+			'thumbnail',
+			'trackbacks',
+			'custom-fields',
+			'comments',
+			'revisions',
+			'page-attributes',
+		],
+		'taxonomies' => [
+			'category',
+		],
+		'rewrite' => true
+	];
+
+	register_post_type( 'pretty-girl', $args );
+}
+
+
+
+add_shortcode ('pretty_girls', 'listing_shortcode');
+
+function listing_shortcode(){
+
+    // Open the object buffer
+    ob_start();
+
+    // Create new instance of WP_Query
+    $query = new WP_Query(
+        array(
+            'post_type' =>  'pretty-girl', 
+            'posts_per_page'    =>  -1, 
+            'order'             =>  'ASC', 
+            'orderby'           =>  'title'
+        )
+    );
+
+    if ($query->have_posts()){
+        while($query->have_posts() ):   $query->the_post(); ?>
+
+        <a href="<?php echo get_post_permalink() ?>">
+		<div class="pretty-girl-image" >
+			<?php $image=get_field('pretty-img'); ?>
+			<img src="<?php echo $image['url']; ?>" alt="<?php $image['alt'] ?>">
+		</div>
+		</a>
+
+        <?php endwhile;
+        wp_reset_postdata();
+    }
+
+    // Close object buffer
+    return ob_get_clean();
+
+}
