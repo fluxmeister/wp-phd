@@ -21,7 +21,7 @@ get_header(); ?>
                 <h2>By: <?php the_author_posts_link() ?></h2><br/>
                 <h5> <?php
                     // set the variable to the value entered for the "Prettyness" custom field
-                    $prettyness = get_post_meta($post->ID, 'Prettyness', true);
+                    $prettyness = get_post_meta($post->ID, 'prettyness', true);
                     // check if the prettyness variable has a value
                     if($prettyness){ ?>
                         <!-- if the prettyness variable has a value and echo out this sentence in addition to the value of the variable -->
@@ -34,7 +34,7 @@ get_header(); ?>
                 ?></h5>
                 <h5> <?php
                     // set the variable to the value entered for the "Prettyness" custom field
-                    $sexyness = get_post_meta($post->ID, 'Sexyness', true);
+                    $sexyness = get_post_meta($post->ID, 'sexyness', true);
                     // check if the prettyness variable has a value
                     if($sexyness){ ?>
                         <!-- if the prettyness variable has a value and echo out this sentence in addition to the value of the variable -->
@@ -51,8 +51,8 @@ get_header(); ?>
 			
             <?php
                 // $cost = get_post_meta($post--->ID, 'Cost', true);
-                $prettyness = get_post_meta($post->ID, 'Prettyness', true);
-                $sexyness = get_post_meta($post->ID, 'Sexyness', true);
+                $prettyness = get_post_meta($post->ID, 'prettyness', true);
+                $sexyness = get_post_meta($post->ID, 'sexyness', true);
                 ?>
             <?php 
                 // output Friendliness if it is added as a custom field
