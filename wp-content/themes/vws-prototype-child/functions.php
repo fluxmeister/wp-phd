@@ -227,7 +227,7 @@ function acf_create_post_type() {
 		'rewrite' => true
 	];
 
-	register_post_type( 'pretty-girl', $args );
+	register_post_type( 'pretty-girls', $args );
 }
 
 
@@ -242,7 +242,7 @@ function listing_shortcode(){
     // Create new instance of WP_Query
     $query = new WP_Query(
         array(
-            'post_type' =>  'pretty-girl', 
+            'post_type' =>  'pretty-girls', 
             'posts_per_page'    =>  -1, 
             'order'             =>  'ASC', 
             'orderby'           =>  'title'
