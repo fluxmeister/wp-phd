@@ -254,7 +254,7 @@ function listing_shortcode(){
 
         <a href="<?php echo get_post_permalink() ?>">
 		<div class="pretty-girl-image" >
-			<?php $image=get_field('pretty-img'); ?>
+			<?php $image=get_field('pretty_img'); ?>
 			<img src="<?php echo $image['url']; ?>" alt="<?php $image['alt'] ?>">
 		</div>
 		</a>
