@@ -253,10 +253,13 @@ function listing_shortcode(){
         while($query->have_posts() ):   $query->the_post(); ?>
 
         <a href="<?php echo get_post_permalink() ?>">
-		<div class="pretty-girl-image" >
-			<?php $image=get_field('pretty_img'); ?>
-			<img src="<?php echo $image['url']; ?>" alt="<?php $image['alt'] ?>">
-		</div>
+            <div class="pretty-girl-name" >
+                <h1><?php echo get_field("pretty-name");?></h1>
+            </div>
+            <div class="pretty-girl-image" >
+                <?php $image=get_field('pretty_img'); ?>
+                <img src="<?php echo $image['url']; ?>" alt="<?php $image['alt'] ?>">
+            </div>
 		</a>
 
         <?php endwhile;
