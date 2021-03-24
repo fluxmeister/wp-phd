@@ -20,8 +20,11 @@ get_header(); ?>
 		<?php while (have_posts()) : the_post(); ?>
 		
 			<div <?php post_class(); ?>>
-			<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
-			<span class="postmetadata"><h3><?php the_time('F j, Y'); ?></h3><div class="content-ver-sep"> </div><h2><?php _e('By', 'travel-lite'); ?>: <?php the_author_posts_link() ?></h2><h5><?php comments_popup_link(__('No Comments Yet&#187;','travel-lite'), __('1 Comment &#187;','travel-lite'), __('% Comments &#187;','travel-lite')); ?></h5><?php _e('Posted in', 'travel-lite'); ?> <?php the_category(', ') ?><?php the_tags(__('<br />Tags: ', 'travel-lite'), ', ', ''); ?><br /><h5><?php edit_post_link(__('Edit This Post', 'travel-lite')); ?></h5></span>	
+				<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+				<span class="postmetadata">
+				<h3><?php the_time('F j, Y'); ?></h3>
+				<div class="content-ver-sep"> </div>
+			<h2><?php _e('By', 'travel-lite'); ?>: <?php the_author_posts_link() ?></h2><h5><?php comments_popup_link(__('No Comments Yet&#187;','travel-lite'), __('1 Comment &#187;','travel-lite'), __('% Comments &#187;','travel-lite')); ?></h5><?php _e('Posted in', 'travel-lite'); ?> <?php the_category(', ') ?><?php the_tags(__('<br />Tags: ', 'travel-lite'), ', ', ''); ?><br /><h5><?php edit_post_link(__('Edit This Post', 'travel-lite')); ?></h5></span>	
 			<div class="entrytext"><div class="thumb"><?php the_post_thumbnail(); ?></div>
 			<?php the_excerpt(); ?>
 			<div class="clear"> </div>
