@@ -24,7 +24,36 @@ get_header(); ?>
 				<span class="postmetadata">
 				<h3><?php the_time('F j, Y'); ?></h3>
 				<div class="content-ver-sep"> </div>
-			<h2><?php _e('By', 'travel-lite'); ?>: <?php the_author_posts_link() ?></h2><h5><?php comments_popup_link(__('No Comments Yet&#187;','travel-lite'), __('1 Comment &#187;','travel-lite'), __('% Comments &#187;','travel-lite')); ?></h5><?php _e('Posted in', 'travel-lite'); ?> <?php the_category(', ') ?><?php the_tags(__('<br />Tags: ', 'travel-lite'), ', ', ''); ?><br /><h5><?php edit_post_link(__('Edit This Post', 'travel-lite')); ?></h5></span>	
+			<h2><?php _e('By', 'travel-lite'); ?>: <?php the_author_posts_link() ?></h2><h5><?php comments_popup_link(__('No Comments Yet&#187;','travel-lite'), __('1 Comment &#187;','travel-lite'), __('% Comments &#187;','travel-lite')); ?></h5><?php _e('Posted in', 'travel-lite'); ?> <?php the_category(', ') ?><?php the_tags(__('<br />Tags: ', 'travel-lite'), ', ', ''); ?><br />
+			
+			<h5> <?php
+                    // set the variable to the value entered for the "Prettyness" custom field
+                    $prettyness = get_post_meta($post->ID, 'prettyness', true);
+                    // check if the prettyness variable has a value
+                    if($prettyness){ ?>
+                        <!-- if the prettyness variable has a value and echo out this sentence in addition to the value of the variable -->
+                        <p>Prettyness: <?php echo $prettyness; ?></p>
+                <?php 
+                    // if the prettyness variable does not have a value then do the following
+                    }else{ 
+                        // do nothing
+                    }
+                ?></h5>
+                <h5> <?php
+                    // set the variable to the value entered for the "Prettyness" custom field
+                    $sexyness = get_post_meta($post->ID, 'sexyness', true);
+                    // check if the prettyness variable has a value
+                    if($sexyness){ ?>
+                        <!-- if the prettyness variable has a value and echo out this sentence in addition to the value of the variable -->
+                        <p>Sexyness: <?php echo $sexyness; ?></p>
+                <?php 
+                    // if the prettyness variable does not have a value then do the following
+                    }else{ 
+                        // do nothing
+                    }
+                ?></h5>
+			
+			<h5><?php edit_post_link(__('Edit This Post', 'travel-lite')); ?></h5></span>	
 			<div class="entrytext"><div class="thumb"><?php the_post_thumbnail(); ?></div>
 			<?php the_excerpt(); ?>
 			<div class="clear"> </div>
